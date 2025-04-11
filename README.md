@@ -1,6 +1,6 @@
 # vue-crash-course-2024
 
-This is my first application with vueJs
+This is my first application with VueJs
 
 ## Recommended IDE Setup
 
