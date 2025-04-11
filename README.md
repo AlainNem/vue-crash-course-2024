@@ -6,6 +6,11 @@ This is my first application with VueJs
 
 [VSCode](https://code.visualstudio.com/) 
 
+## Used librarires 
+
+[Tailwind](https://tailwindcss.com/)
+[Primevue](https://primevue.org/icons)
+
 ## Project Setup
 
 ```sh
