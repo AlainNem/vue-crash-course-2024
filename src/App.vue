@@ -17,7 +17,6 @@ export default {
       } else{
         this.status = 'active'
       }
-      
     }
   },
 }
