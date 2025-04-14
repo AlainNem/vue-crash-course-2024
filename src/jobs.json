@@ -83,48 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "11fb",
-      "type": "Part-Time",
-      "title": "dfgsdgfsd",
-      "description": "gsdfgsdg",
-      "salary": "$100K - $125K",
-      "location": "fdgdfg",
-      "company": {
-        "name": "dfgdfg",
-        "description": "dfgdfg",
-        "contactEmail": "test@test.com",
-        "contactPhone": "dfgsdfgsdg"
-      }
-    },
-    {
-      "id": "4135",
-      "type": "Remote",
-      "title": "dfgdfgd",
-      "description": "dfgdfg",
-      "salary": "$175K - $200K",
-      "location": "sgdfgbb",
-      "company": {
-        "name": "sfsdf",
-        "description": "sdfsdf",
-        "contactEmail": "23123@tet",
-        "contactPhone": "fsdf"
-      }
-    },
-    {
-      "id": "7465",
-      "type": "Part-Time",
-      "title": "fdgdfg",
-      "description": "bvnvbnvbn",
-      "salary": "$150K - $175K",
-      "location": "gerggtert",
-      "company": {
-        "name": "dfgdfg",
-        "description": "bvcvb",
-        "contactEmail": "test@test.com",
-        "contactPhone": "234sfsd"
-      }
     }
   ]
 }
