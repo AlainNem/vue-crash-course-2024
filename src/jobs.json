@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "type": "Part-Time",
-      "title": "fghfghfg",
-      "description": "hmarrr",
-      "salary": "$175K - $200K",
-      "location": "ghjtytut",
-      "company": {
-        "name": "utyurtysdfb",
-        "description": "vbvbnvbn",
-        "contactEmail": "test@test.coms",
-        "contactPhone": "bb213412321"
-      },
-      "id": "dc60"
     }
   ]
 }
