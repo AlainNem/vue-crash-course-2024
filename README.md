@@ -10,6 +10,7 @@ This is my first application with VueJs
 
 [Tailwind](https://tailwindcss.com/)
 [Primevue](https://primevue.org/icons)
+[Json Server](https://www.npmjs.com/package/json-server)
 
 ## Project Setup
 
@@ -21,6 +22,10 @@ npm install
 
 ```sh
 npm run dev
+```
+
+```sh
+npm run server
 ```
 
 ### Compile and Minify for Production

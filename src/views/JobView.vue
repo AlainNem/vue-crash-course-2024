@@ -1,11 +1,15 @@
 <script setup>
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 import { reactive, onMounted } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 import BackButton from '@/components/BackButton.vue';
+import { useToast } from 'vue-toastification';
 import axios from 'axios';
 
 const route = useRoute();
+const router = useRouter();
+const toast = useToast();
+
 const JobId = route.params.id;
 
 const state = reactive({
@@ -13,9 +17,24 @@ const state = reactive({
     isLoading: true
 });
 
+const deleteJob = async () => {
+  try {
+    const confirm = window.confirm('Are you sure you want to delete this job?')
+    if(confirm) {
+      await axios.delete(`/api/jobs/${JobId}`);
+      toast.success('Job delete successfully');
+      router.push('/jobs');
+    }
+  
+  } catch (error) {
+    console.error('Error deleting job', error);
+    toast.error('Job was not deleted');
+  }
+};
+
 onMounted(async () => {
     try {
-        const response = await axios.get(`http://localhost:5000/jobs/${JobId}`);
+        const response = await axios.get(`/api/jobs/${JobId}`);
         state.job = response.data;
     } catch (error) {
         console.error('Error fetching job', error);
@@ -40,7 +59,7 @@ onMounted(async () => {
                 class="text-gray-500 mb-4 flex align-middle justify-center md:justify-start"
               >
                 <i
-                  class="fa-solid fa-location-dot text-lg text-orange-700 mr-2"
+                  class="pi pi-map-marker text-xl text-orange-700 mr-2"
                 ></i>
                 <p class="text-orange-700">{{ state.job.location }}</p>
               </div>
@@ -94,7 +113,7 @@ onMounted(async () => {
                 class="bg-green-500 hover:bg-green-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >Edit Job
               </RouterLink>
-              <button
+              <button @click="deleteJob"
                 class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
               >
                 Delete Job
