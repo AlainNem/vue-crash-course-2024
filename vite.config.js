@@ -13,7 +13,7 @@ export default defineConfig({
   server:{
    proxy: {
     '/api':{
-      target: 'https://json-server-eh7v.onrender.com',
+      target: 'http://localhost:5000',
       changeOrigin: true,
       rewrite: (path) => path.replace(/^\/api/,''),
     }
