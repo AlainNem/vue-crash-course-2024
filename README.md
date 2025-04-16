@@ -18,7 +18,7 @@ This is my first application with VueJs
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and run front and server
 
 ```sh
 npm run dev
